@@ -20,7 +20,8 @@ RUN apt-get update \
     #
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
     && apt-get -y install git procps lsb-release \
-    #
+    # Upgrade pip
+    && pip install --upgrade pip \
     # Install pylint
     && pip --disable-pip-version-check --no-cache-dir install pylint \
     #
